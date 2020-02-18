@@ -11,8 +11,8 @@ Project Initiated | Support Function Made | App Skeleton Created | The Full App 
 ## Packages Used
 The Application utilizes several packages to operate:
 
-* NLTK - for actual sentiment analysis;
-* Kivy - for framework preparation;
+* NLTK == 3.4.5 - for actual sentiment analysis;
+* Kivy == 1.11.1 - for framework preparation;
 
 ## General Goal of the Project
 Create an application using python with its own GUI that can analyse sentiment of an input sentence in English. As well, through the build process to learn proper usage of Git and GitHub functionalities. 
