@@ -5,7 +5,7 @@ This is a simple application that is built using python. The essence of it is th
 __Last Update:__ 2020/02/18
 
 Project Initiated | Support Function Made | App Skeleton Created | The Full App Prepared | App Deployable
-:------------ |:------------ |:------------ |:------------ |:------------ |
+:------------: |:------------: |:------------: |:------------: |:------------: |
 :heavy_check_mark: | :x: | :x: | :x: | :x:
 
 ## Packages Used
