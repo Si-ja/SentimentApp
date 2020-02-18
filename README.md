@@ -2,11 +2,11 @@
 This is a simple application that is built using python. The essence of it is that it can analyse the sentiment of an input sentence that is given to it in English.
 
 ## Current Status
-__Last Update:__ 2020/02/18
+__Last Update:__ 2020/02/19
 
 Project Initiated | Support Function Made | App Skeleton Created | The Full App Prepared | App Deployable
 :------------: |:------------: |:------------: |:------------: |:------------: |
-:heavy_check_mark: | :x: | :x: | :x: | :x:
+:heavy_check_mark: | :heavy_check_mar: | :x: | :x: | :x:
 
 ## Packages Used
 The Application utilizes several packages to operate:
@@ -21,7 +21,7 @@ Create an application using python with its own GUI that can analyse sentiment o
 
 - [x] Create a repository
 - [x] Create a README file
-- [ ] Create a support script that will install all needed packages
+- [x] Create a support script that will check if  all the needed packages are ready
 - [ ] Create a .kv file with the app skeleton
 - [ ] Add information section in the app
 - [ ] Add settings section in the app
