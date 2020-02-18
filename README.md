@@ -6,7 +6,7 @@ __Last Update:__ 2020/02/19
 
 Project Initiated | Support Function Made | App Skeleton Created | The Full App Prepared | App Deployable
 :------------: |:------------: |:------------: |:------------: |:------------: |
-:heavy_check_mark: | :heavy_check_mar: | :x: | :x: | :x:
+:heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x:
 
 ## Packages Used
 The Application utilizes several packages to operate:
