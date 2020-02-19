@@ -6,13 +6,14 @@ __Last Update:__ 2020/02/19
 
 Project Initiated | Support Function Made | App Skeleton Created | The Full App Prepared | App Deployable
 :------------: |:------------: |:------------: |:------------: |:------------: |
-:heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x:
+:heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x:
 
 ## Packages Used
 The Application utilizes several packages to operate:
 
 * NLTK == 3.4.5 - for actual sentiment analysis;
 * Kivy == 1.11.1 - for framework preparation;
+* JSON - for files reading
 
 ## General Goal of the Project
 Create an application using python with its own GUI that can analyse sentiment of an input sentence in English. As well, through the build process to learn proper usage of Git and GitHub functionalities. 
@@ -22,7 +23,10 @@ Create an application using python with its own GUI that can analyse sentiment o
 - [x] Create a repository
 - [x] Create a README file
 - [x] Create a support script that will check if  all the needed packages are ready
-- [ ] Create a .kv file with the app skeleton
-- [ ] Add information section in the app
-- [ ] Add settings section in the app
+- [x] Create a .kv file with the app skeleton
+- [x] Add information section in the app
+- [x] Add settings section in the app
+- [ ] Build a sentiment analyzing page
 - [ ] Prepare the main script with all the needed functionalities for the sentiment analysis.
+- [ ] Finalize the app
+- [ ] Deploy the app
