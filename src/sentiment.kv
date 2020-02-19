@@ -19,13 +19,19 @@ WindowManager:
                 text: "Information"
                 on_release:
                     app.root.current = "information"
-                    root.manager.transition.direction = "right"
-                
-                
+                    root.manager.transition.direction = "right"    
         Label:
             text: "Input a sentence for an analysis"
-        TextInput:
-            id: sentence
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            TextInput:
+                id: sentence
+                padding_x:
+                    [self.center[0] - self._get_text_width(max(self._lines, key=len), self.tab_width, self._label_cached) / 2.0,
+                    0] if self.text else [self.center[0], 0]
+                padding_y: 
+                    [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
         Button:
             text: "Analyse"
             on_release:
@@ -37,12 +43,13 @@ WindowManager:
     GridLayout:
         cols: 1
         Label:
-            text: "Indicate what you want to see on the analysis screen.\nIt will save automatically."
+            text: "Indicate how you want the application to work.\nIt will save automatically."
             padding: [0, (self.height-self.line_height)/2]
         GridLayout:
             cols: 2
             Label:
-                text: "Show the prediction of the sentiment"
+                text: "Clear input screen after anaylsis"
+                multiline: True
             CheckBox:
                 active: root.checkbox_click_prediction_get(self)
                 color: .294, .761, .623
@@ -61,14 +68,17 @@ WindowManager:
                 active: root.checkbox_click_input_get(self)
                 color: .294, .761, .623
                 on_active: root.checkbox_click_input(self, self.active)
-        Button:
-            text: "Go Back"
-            on_release:
-                app.root.current = "main"
-                root.manager.transition.direction = "left"
-
-        
-            
+        AnchorLayout:
+            anchor_x: "center"
+            Button:
+                text: "Go Back"
+                size: root.width * 0.4, root.height * 0.1
+                size_hint_x: 0.7
+                size_hint_y: 0.3
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "left"
+ 
 <InformationWindow>:
     name: "information"
     GridLayout:
@@ -82,7 +92,7 @@ WindowManager:
             font_size: 20
             halign: "center"
         AnchorLayout:
-            anchor_x: "right"
+            anchor_x: "center"
             Button:
                 text: "Go Back"
                 size: root.width * 0.4, root.height * 0.1

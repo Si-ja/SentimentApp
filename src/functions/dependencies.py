@@ -17,6 +17,12 @@ class Support:
         except:
             print(">You are missing a kivy package.")
             
+        try:
+            import json
+            print(">You have a json package installed under {} version.".format(json.__version__))
+        except:
+            print(">You are missing a json package.")
+            
 class Sentiment:
     '''Class responsible for performing of the sentiment analysis'''
     pass
