@@ -1,0 +1,73 @@
+WindowManager:
+    MainWindow:
+    InformationWindow:
+    SettingsWindow:
+    AnalysisWindow:
+
+<MainWindow>:
+    name: "main"
+    GridLayout:
+        cols:1
+        GridLayout:
+            cols: 2
+            Button:
+                text: "Settings"
+                on_release: 
+                    app.root.current = "settings"
+                    root.manager.transition.direction = "right"
+            Button:
+                text: "Information"
+                on_release:
+                    app.root.current = "information"
+                    root.manager.transition.direction = "right"
+                
+                
+        Label:
+            text: "Input a sentence for an analysis"
+        TextInput:
+            id: sentence
+        Button:
+            text: "Analyse"
+            on_release:
+                app.root.current = "analyse"
+                root.manager.transition.direction = "left"
+            
+<SettingsWindow>:
+    name: "settings"
+    Button:
+        text: "Go Back"
+        on_release:
+            app.root.current = "main"
+            root.manager.transition.direction = "left"
+            
+<InformationWindow>:
+    name: "information"
+    GridLayout:
+        padding: 40, 40
+        cols: 1
+        Label:
+            text: "This is a short description of the App:\n\n>The app seeks to analyse a sentence provided to it using an NLTK package to python and deliver a prediciton on whether the sentence is positive, negative or neutral.\n\n>The GUI is built using kivy package to python.\n\n>The whole project is maintained on https://github.com/Si-ja/SentimentApp"
+            text_size: self.width, None
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            padding: [0, (self.height-self.line_height)/2]
+            font_size: 20
+            halign: "center"
+        AnchorLayout:
+            anchor_x: "right"
+            Button:
+                text: "Go Back"
+                size: root.width * 0.4, root.height * 0.1
+                size_hint_x: 1
+                size_hint_y: 0.3
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "left"
+            
+<AnalysisWindow>:
+    name: "analyse"
+    Button:
+        text: "Go Back"
+        on_release:
+            app.root.current = "main"
+            root.manager.transition.direction = "right" 
+    
