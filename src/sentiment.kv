@@ -34,11 +34,40 @@ WindowManager:
             
 <SettingsWindow>:
     name: "settings"
-    Button:
-        text: "Go Back"
-        on_release:
-            app.root.current = "main"
-            root.manager.transition.direction = "left"
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Indicate what you want to see on the analysis screen.\nIt will save automatically."
+            padding: [0, (self.height-self.line_height)/2]
+        GridLayout:
+            cols: 2
+            Label:
+                text: "Show the prediction of the sentiment"
+            CheckBox:
+                active: root.checkbox_click_prediction_get(self)
+                color: .294, .761, .623
+                on_active: root.checkbox_click_prediction(self, self.active)
+                
+            Label:
+                text: "Show the emotional percentages"
+            CheckBox:
+                active: root.checkbox_click_percentage_get(self)
+                color: .294, .761, .623
+                on_active: root.checkbox_click_percentage(self, self.active)
+                
+            Label:
+                text: "Show the original input sentence"
+            CheckBox:
+                active: root.checkbox_click_input_get(self)
+                color: .294, .761, .623
+                on_active: root.checkbox_click_input(self, self.active)
+        Button:
+            text: "Go Back"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "left"
+
+        
             
 <InformationWindow>:
     name: "information"
