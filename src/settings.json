@@ -1,1 +1,1 @@
-{"prediction": true, "percentage": false, "input": true}
+{"sentence": false, "percentage": true, "input": true, "text": "Hello there, how have you been doing?", "feeling": "", "output_percentage": ""}
