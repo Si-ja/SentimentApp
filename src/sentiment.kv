@@ -37,10 +37,12 @@ WindowManager:
             on_release:
                 app.root.current = "analyse"
                 root.manager.transition.direction = "left"
+                
             
 <SettingsWindow>:
     name: "settings"
     GridLayout:
+        padding: 40, 40
         cols: 1
         Label:
             text: "Indicate how you want the application to work.\nIt will save automatically."
@@ -54,14 +56,12 @@ WindowManager:
                 active: root.checkbox_click_prediction_get(self)
                 color: .294, .761, .623
                 on_active: root.checkbox_click_prediction(self, self.active)
-                
             Label:
                 text: "Show the emotional percentages"
             CheckBox:
                 active: root.checkbox_click_percentage_get(self)
                 color: .294, .761, .623
-                on_active: root.checkbox_click_percentage(self, self.active)
-                
+                on_active: root.checkbox_click_percentage(self, self.active)  
             Label:
                 text: "Show the original input sentence"
             CheckBox:
@@ -104,9 +104,19 @@ WindowManager:
             
 <AnalysisWindow>:
     name: "analyse"
-    Button:
-        text: "Go Back"
-        on_release:
-            app.root.current = "main"
-            root.manager.transition.direction = "right" 
+    GridLayout:
+        padding: 40, 40
+        cols: 1
+        Label:
+            text: str(root.verify())
+        Label:
+            text: "Sentiment"
+        Label:
+            text: "Percentage"
+        Button:
+            text: "Go Back"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+                root.manager.screens[3].verify()
     

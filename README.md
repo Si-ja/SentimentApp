@@ -2,7 +2,7 @@
 This is a simple application that is built using python. The essence of it is that it can analyse the sentiment of an input sentence that is given to it in English.
 
 ## Current Status
-__Last Update:__ 2020/02/19
+__Last Update:__ 2020/02/20
 
 Project Initiated | Support Function Made | App Skeleton Created | The Full App Prepared | App Deployable
 :------------: |:------------: |:------------: |:------------: |:------------: |

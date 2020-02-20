@@ -42,7 +42,7 @@ class InformationWindow(Screen):
     pass
 
 class SettingsWindow(Screen):
-    """Possible Settings a user can toggle"""
+    """Possible Settings a user can toggle"""    
     def checkbox_click_prediction(self, instance, value):
         if value is True:
             prediction_set = True
@@ -84,7 +84,11 @@ class SettingsWindow(Screen):
 
 class AnalysisWindow(Screen):
     """Actual sentence Analysis window"""
-    pass
+    def verify(self):
+        with open('settings.json') as json_file:
+            data = json.load(json_file)
+        prediction_set = data["prediction"]
+        return prediction_set
 
 class WindowManager(ScreenManager):
     """App windows' manager"""
