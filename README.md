@@ -2,7 +2,7 @@
 This is a simple application that is built using python. The essence of it is that it can analyse the sentiment of an input sentence that is given to it in English.
 
 ## Current Status
-__Last Update:__ 2020/02/21
+__Last Update:__ 2020/02/24
 
 Project Initiated | Support Function Made | App Skeleton Created | The Full App Prepared | App Deployable
 :------------: |:------------: |:------------: |:------------: |:------------: |
@@ -33,5 +33,6 @@ Create an application using python with its own GUI that can analyse sentiment o
 
 ## TODO:
 A small list of possible things that could be addressed in the future and/or still left to be done - seperated into FEATURE or BUG criteria:
+- [ ] The app can be compiled and even deployed to an Android device. However, as soon as the analyze function is utilized - the app crashes. No clear reasons to this bug are present. This postpoints the whole process.
 - [ ] "Pretify" the GUI with a more plesant to look at GUI (FEATURE)
 - [ ] Fix the issue with the Text on the main page not centering (BUG)
